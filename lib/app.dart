@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ios_18_calculator/core/routes/app_routes.dart';
+import 'package:ios_18_calculator/core/themes/themes.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -12,10 +13,9 @@ class App extends StatelessWidget {
       routeInformationProvider: AppRoutes.router.routeInformationProvider,
       debugShowCheckedModeBanner: false,
       title: 'IOS 18 Calculator',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
+      themeMode: ThemeMode.dark,
     );
   }
 }
